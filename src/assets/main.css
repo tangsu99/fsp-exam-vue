@@ -1,0 +1,630 @@
+body,
+div,
+ul,
+li,
+img,
+p,
+a,
+form,
+input,
+button,
+textarea {
+    display: block;
+    margin: 0;
+    border: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    cursor: default;
+    font-family: "mc-font";
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none !important;
+}
+/* input[type="number"] {
+    -moz-appearance: textfield;
+} */
+
+/*滚动条样式*/
+.y-scroll::-webkit-scrollbar {
+    width: 10px;
+}
+.y-scroll::-webkit-scrollbar-thumb {
+    /* border-radius: 10px; */
+    -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+    background: rgba(0, 0, 0, 0.2);
+}
+.y-scroll::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+    /* border-radius: 5px; */
+    background: rgba(0, 0, 0, 0.1);
+}
+.y-scroll::-webkit-scrollbar-corner {
+    border-radius: 5px;
+}
+
+:root {
+    --button-font-size: 30px;
+}
+
+@font-face {
+    font-family: "mc-font";
+    src: url("./font/mc-font2.ttf");
+}
+.warn-card {
+    image-rendering: pixelated;
+    background-image: url(./images/rainbow_pixel_gui/system_info.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+
+    font-family: "mc-font";
+    font-size: 23px;
+    line-height: 70px;
+    color: #fff;
+
+    border-radius: 5px;
+    height: 70px;
+    padding-left: 35px;
+    z-index: 10;
+}
+.info-card {
+    image-rendering: pixelated;
+    background-image: url(./images/vanilla_gui/demo_background.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+
+    font-family: "mc-font";
+    font-size: 23px;
+    line-height: 70px;
+    color: #fff;
+    border-radius: 5px;
+    padding-left: 35px;
+    color: black;
+}
+
+/* 选择获取白名单的方式页面 */
+.choice-method-page {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    background-image: url("./images/bg.png");
+    background-position: center;
+    z-index: -1;
+}
+
+.choice-method-page .logo {
+    display: block;
+    margin: 0 auto;
+    margin-top: 200px;
+    user-select: none;
+    -webkit-user-drag: none;
+}
+.choice-method-page .menu {
+    width: 700px;
+    display: flex;
+    margin: 0 auto;
+    gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 50px;
+}
+.choice-method-page .sub-menu {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+}
+.choice-method-page .sub-menu button {
+    width: 50%;
+}
+.minecraft-button {
+    font-family: "mc-font";
+    color: #fff;
+    border-radius: 5px;
+    background-image: url(./images/rainbow_pixel_gui/button.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+    image-rendering: pixelated;
+}
+.minecraft-button:hover {
+    background-image: url(./images/rainbow_pixel_gui/button_highlighted.png);
+    image-rendering: pixelated;
+}
+.choice-method-page .choice-button {
+    font-size: 30px;
+    width: 100%;
+    height: 70px;
+}
+.choice-method-page .choice-button a {
+    color: #fff;
+}
+/* 熟人担保页面 */
+.bg {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    background: url("../assets/images/bg.png");
+    background-position: center;
+    z-index: -1;
+    -webkit-filter: blur(15px);
+    -moz-filter: blur(15px);
+    -o-filter: blur(15px);
+    -ms-filter: blur(15px);
+    filter: blur(7px);
+}
+.content {
+    font-family: "mc-font";
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+}
+.content > .title {
+    width: 100%;
+    flex: 1;
+    background-color: rgba(0, 0, 0, 0.3);
+    font-size: 40px;
+    display: flex;
+}
+.content .title p {
+    margin: auto;
+    user-select: none;
+}
+.content .main {
+    flex: 7;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-top: 3px solid #000;
+    border-bottom: 3px solid #000;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    position: relative;
+}
+.guarantee .main .form {
+    width: 100%;
+}
+.guarantee .main .text {
+    font-size: 27px;
+    line-height: 50px;
+    text-align: center;
+    user-select: none;
+}
+.prepare-exam-page .main .sub-title {
+    text-align: center;
+    user-select: none;
+}
+
+.content .main input {
+    width: 800px;
+    height: 70px;
+    background-image: url(../assets/images/rainbow_pixel_gui/button_disabled.png);
+    image-rendering: pixelated;
+    border-radius: 5px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+    font-family: "mc-font";
+    font-size: 25px;
+    padding-left: 20px;
+    color: #fff;
+    margin: 10px auto;
+}
+/* 这俩一样的 */
+.minecraft-input {
+    width: 800px;
+    height: 70px;
+    background-image: url(../assets/images/rainbow_pixel_gui/button_disabled.png);
+    image-rendering: pixelated;
+    border-radius: 5px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+    font-family: "mc-font";
+    font-size: 25px;
+    padding-left: 20px;
+    color: #fff;
+    margin: 10px auto;
+}
+
+.input-red-color::-webkit-input-placeholder,
+.input-red-color:-ms-input-placeholder,
+.input-red-color::placeholder {
+    color: red;
+}
+
+.option-red-color {
+    color: red;
+}
+
+.guarantee-warn-card {
+    width: 500px;
+    position: absolute;
+    left: 50%;
+    bottom: 150px;
+    transform: translate(-50%, 0);
+    padding-left: 0;
+    text-align: center;
+}
+.guarantee-info-card {
+    width: 600px;
+    height: 120px;
+    position: absolute;
+    left: 50%;
+    bottom: 150px;
+    transform: translate(-50%, 0);
+    padding-left: 0;
+    text-align: center;
+    .player-name {
+        position: absolute;
+        left: 80px;
+        top: 3px;
+
+        font-size: 30px;
+    }
+    .player-pic {
+        position: absolute;
+        left: 15px;
+        top: 10px;
+        width: 50px;
+        image-rendering: pixelated;
+    }
+    .player-uuid {
+        position: absolute;
+        left: 20px;
+        bottom: 3px;
+    }
+    .button {
+        position: absolute;
+        top: 10px;
+        right: 50px;
+        width: 200px;
+        height: 50px;
+        font-size: 20px;
+    }
+    .player-uuid {
+        position: absolute;
+        left: 20px;
+        bottom: 3px;
+    }
+}
+
+.content .end {
+    flex: 1;
+    background-color: rgba(0, 0, 0, 0.3);
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+}
+.content .end .button {
+    width: 400px;
+    font-size: 30px;
+    height: 70px;
+}
+
+/* 考生信息页面 */
+
+.examineeInfo {
+    padding: 10px;
+    margin: 0 10px 10px 10px;
+}
+.examineeInfo p {
+    text-align: center;
+    line-height: 40px;
+    font-size: 20px;
+    user-select: none;
+}
+.examineeInfo .option-list {
+    display: flex;
+    gap: 10px;
+    user-select: none;
+}
+
+.examineeInfo .option-list .option {
+    height: 70px;
+    width: 50%;
+    font-size: 25px;
+    line-height: 70px;
+    text-align: center;
+    background-image: url(../assets/images/rainbow_pixel_gui/button_disabled.png);
+    image-rendering: pixelated;
+}
+.examineeInfo .option-list .option:hover {
+    background-image: url(../assets/images/rainbow_pixel_gui/button_highlighted.png);
+    image-rendering: pixelated;
+}
+.examineeInfo .option-list .selected {
+    background-image: url(../assets/images/rainbow_pixel_gui/button.png);
+    image-rendering: pixelated;
+}
+/* 
+@media screen and (max-width: 1200px) {
+    .map {
+        display: none;
+    }
+} */
+/* 考试页面 */
+.examination-page {
+    font-family: "mc-font";
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    position: relative;
+    --block-size: 130px;
+    /* .back-ground {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        .grass {
+            background: url(../assets/images/vanilla_gui/block/grass_block_side.png);
+            background-size: var(--block-size);
+            image-rendering: pixelated;
+            height: var(--block-size);
+        }
+        .dirt {
+            background: url(../assets/images/vanilla_gui/block/dirt.png);
+            background-size: var(--block-size);
+            image-rendering: pixelated;
+            height: var(--block-size);
+        }
+        .stone {
+            background: url(../assets/images/vanilla_gui/block/stone.png);
+            background-size: var(--block-size);
+            image-rendering: pixelated;
+            flex: 6;
+            position: relative;
+        }
+        .deepslate {
+            background: url(../assets/images/vanilla_gui/block/deepslate.png);
+            background-size: var(--block-size);
+            image-rendering: pixelated;
+            flex: 6;
+        }
+        .bedrock {
+            background: url(../assets/images/vanilla_gui/block/bedrock.png);
+            background-size: var(--block-size);
+            image-rendering: pixelated;
+            height: var(--block-size);
+        }
+        .ore {
+            img {
+                width: var(--block-size);
+                height: var(--block-size);
+                image-rendering: pixelated;
+                position: absolute;
+            }
+        }
+    } */
+/* 
+    .left {
+        flex: 1;
+        
+    } */
+
+    /* .right {
+        flex: 1;
+    } */
+    
+}
+
+@keyframes reveal {
+    from {
+        clip-path: inset(0 100% 0 0); /* 从左侧开始裁切，背景图片完全隐藏 */
+    }
+    to {
+        clip-path: inset(0 var(--showScore) 0 0); /* 完全显示背景图片 */
+    }
+}
+
+/* 结果页面 */
+.view-result .main {
+    justify-content: space-around;
+    flex-direction: column;
+    gap: 80px;
+    user-select: none;
+}
+
+.view-result .get-info div {
+    width: 100%;
+    display: flex;
+    gap: 10px;
+    .button {
+        width: 50%;
+        height: 70px;
+        font-size: var(--button-font-size);
+    }
+}
+
+.view-result .guarantee-result {
+    .text {
+        font-size: 30px;
+        padding: 10px;
+    }
+    .tips {
+        font-size: 26px;
+        text-align: center;
+        .server-url-list {
+            padding: 10px;
+            li {
+                font-size: 25px;
+                user-select: all;
+                /* text-align: left; */
+            }
+            li:first-child {
+                font-size: 30px;
+                user-select: none;
+            }
+        }
+    }
+}
+
+.view-result .exam-list {
+    width: 100%;
+    .title {
+        font-size: 30px;
+        padding: 5px;
+        text-align: center;
+    }
+    .tips {
+        font-size: 20px;
+        padding: 5px;
+        padding-bottom: 20px;
+        text-align: center;
+        color: grey;
+    }
+    .list {
+        width: 80%;
+        max-width: 1000px;
+        margin: 0 auto;
+        max-height: 600px;
+        overflow-y: auto;
+    }
+    .list li {
+        font-size: 30px;
+        padding: 15px;
+        display: flex;
+        justify-content: space-between;
+        p {
+            font-size: 25px;
+            color: grey;
+        }
+        p:first-child {
+            font-size: 30px;
+            color: #ffffff;
+        }
+        button {
+            width: 200px;
+            font-size: 28px;
+            display: none;
+        }
+    }
+    .list li:hover {
+        background-color: rgba(0, 0, 0, 0.5);
+        button {
+            display: block;
+        }
+    }
+}
+.view-result .show-score {
+    width: 80%;
+    .score {
+        position: relative;
+        top: -100px;
+        > p {
+            text-align: center;
+            font-size: 40px;
+            color: yellow;
+            text-shadow: 0 0 3px #000000, 0 0 3px #000000, 0 0 3px #000000,
+                0 0 3px #000000, 0 0 3px #000000, 0 0 3px #000000,
+                0 0 3px #000000;
+            position: relative;
+            bottom: 10px;
+            z-index: 2;
+        }
+        .pass {
+            width: 150px;
+            height: 150px;
+            background: url(../assets/images/vanilla_gui/accept.png);
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            background-position: center;
+            image-rendering: pixelated;
+            position: absolute;
+            right: 50px;
+            bottom: -40px;
+            animation: fadeIn 1s ease-in-out forwards;
+        }
+        .no-pass {
+            width: 150px;
+            height: 150px;
+            background: url(../assets/images/vanilla_gui/reject.png);
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            background-position: center;
+            image-rendering: pixelated;
+            position: absolute;
+            right: 50px;
+            bottom: -40px;
+            animation: fadeIn 1s ease-in-out forwards;
+        }
+        .score-line {
+            margin: 0 auto;
+            border-radius: 5px;
+            background-color: #000;
+            width: 100%;
+            height: 15px;
+            position: relative;
+            .end,
+            .front {
+                position: absolute;
+                left: 0;
+                top: 0px;
+                width: 100%;
+                height: 100%;
+            }
+
+            .end {
+                background: url(../assets/images/vanilla_gui/experience_bar_background.png);
+                background-repeat: no-repeat;
+                background-size: 100% 100%;
+                background-position: center;
+                image-rendering: pixelated;
+            }
+            .front {
+                background: url(../assets/images/vanilla_gui/experience_bar_progress.png);
+                background-repeat: no-repeat;
+                background-size: 100% 100%;
+                background-position: center;
+                image-rendering: pixelated;
+                clip-path: inset(0 100% 0 0);
+                animation: reveal 2s ease-in-out forwards;
+            }
+        }
+        .text {
+            animation: fadeIn 1s ease-in-out forwards;
+            animation-delay: 2.5s;
+            text-align: center;
+            width: 60%;
+            min-width: 450px;
+            font-size: 25px;
+            position: absolute;
+            top: 100px;
+            left: 50%;
+            opacity: 0;
+            transform: translate(-50%, 0);
+            .server-url-list {
+                padding: 10px;
+                li {
+                    font-size: 25px;
+                    user-select: all;
+                    /* text-align: left; */
+                }
+                li:first-child {
+                    font-size: 30px;
+                    user-select: none;
+                }
+            }
+        }
+    }
+}
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
